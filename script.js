@@ -44,3 +44,23 @@ if (canvas) {
   }
   draw();
 }
+
+// 現在のページ名を取得
+let currentPage = window.location.pathname.split("/").pop();
+if (currentPage === "" || currentPage === "/") {
+  currentPage = "index.html"; // ルートの場合
+}
+
+// デバッグ用（確認したい場合）
+// console.log("Current Page:", currentPage);
+
+const navLinks = document.querySelectorAll("nav a");
+
+navLinks.forEach(link => {
+  // hrefのファイル名を取得
+  const linkPage = link.getAttribute("href").split("/").pop();
+  if (linkPage === currentPage) {
+    link.classList.add("active");
+  }
+});
+

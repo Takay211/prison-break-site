@@ -114,3 +114,11 @@ footer {
   font-size: 0.9em;
   line-height: 1.5;
 }
+
+nav a.active {
+  background: #f00;       /* 赤背景 */
+  color: #fff;            /* 白文字 */
+  padding: 5px 10px;
+  border-radius: 4px;     /* 角を丸く */
+  font-weight: bold;
+}
